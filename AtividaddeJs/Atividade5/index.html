@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let list = [12, 5, 27, 9, 33, 18, 42, 7, 56, 3, 81, 14, 22, 64, 1, 90, 48, 30, 77, 50]
+        let listPar = []
+        let listImpar = []
+        for (numero of list){
+            if (numero % 2 == 0){
+                listPar.push(numero)
+            }else{
+                listImpar.push(numero)
+            }
+        }
+        alert(`Os numeros inteiros foram ${list}\nOs numeros pares foram${listPar}\nOs numeros impares foram ${listImpar}`)
+</script>
+</body>
+</html>

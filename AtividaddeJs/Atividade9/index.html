@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let inteiro = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        let soma = []
+        
+        for(numero of inteiro){
+            var numerosQ = numero*numero
+            soma.push(numerosQ)
+        }
+        let somaQ = soma.reduce((a,b)=>a+b,0)
+        alert(`A soma do quadrado dos vetores são ${somaQ}\n e a lista dos quadrados é ${soma}`)
+</script>
+</body>
+</html>

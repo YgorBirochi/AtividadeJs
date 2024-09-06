@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var perguntas =[
+            "Telefonou para a vítima?",
+            "Devia para a vítima?",
+            "Esteve no local do crime?",
+            "Já trabalhou com a vítima?",
+            "Mora perto da vítima?"
+        ]
+
+        var respostas = []
+        var contagem = 0
+
+        for(var i in perguntas){
+            var resposta = prompt(perguntas[i] + " (Responda com 'sim' ou 'não'):  ")
+            respostas.push(resposta.toLowerCase)
+
+            if(resposta.toLowerCase() === "sim"){
+            contagem++
+            }
+        }
+        var sujeito
+
+        if (contagem === 2) {
+            sujeito = "Suspeito"
+        }   
+        else if(contagem >= 3 && contagem <= 4){
+            sujeito = "Cúmplice"
+        }
+        else if(contagem === 5){
+            sujeito = "Assassino"
+        }
+        else{
+            sujeito = "Inocente"
+        }
+
+        alert(`De acordo com as suas respostas, você se encaixa como: ${sujeito}.`)
+    </script>
+</body>
+</html>

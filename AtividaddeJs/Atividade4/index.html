@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let list = ['c','a','m','a','r','o','t','e','i','r','o']
+        let listVogal = ['a', 'e', 'i', 'o','u' ]
+        let listConsoants = []
+        let quantidade = 0
+        
+        for (caracteres of list){
+            if(listVogal.includes(caracteres) == false){
+                quantidade++
+                listConsoants.push(caracteres)
+            }
+        }
+        
+        alert(`A palavra Camaroteiro, tem ${quantidade} de consoante e as consoantes foram ${listConsoants}`)
+        
+</script>
+</body>
+</html>

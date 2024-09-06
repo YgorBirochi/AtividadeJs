@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let mesesT =[
+    { "mes": "Janeiro", "mediaTemp": 26 },
+    { "mes": "Fevereiro", "mediaTemp": 26 },
+    { "mes": "Março", "mediaTemp": 25 },
+    { "mes": "Abril", "mediaTemp": 23 },
+    { "mes": "Maio", "mediaTemp": 21 },
+    { "mes": "Junho", "mediaTemp": 19 },
+    { "mes": "Julho", "mediaTemp": 18 },
+    { "mes": "Agosto", "mediaTemp": 20 },
+    { "mes": "Setembro", "mediaTemp": 22 },
+    { "mes": "Outubro", "mediaTemp": 24 },
+    { "mes": "Novembro", "mediaTemp": 25 },
+    { "mes": "Dezembro", "mediaTemp": 26 }
+        ];
+        let mesesAcima = []
+
+        let media = mesesT.reduce((a,mesesT)=> a + mesesT.mediaTemp,0)
+        let mediaAno = media/12
+
+        mesesT.forEach(item => {
+            if (item.mediaTemp > mediaAno) {
+                mesesAcima.push(item);
+            }
+        });
+
+        alert(`Meses com temperatura acima da média anual: 
+            ${mesesAcima.map(item => {
+                return "Mes:" + item.mes + ", Média: " + item.mediaTemp + "\n"
+            })}
+            \nA media anual é ${mediaAno.toFixed(2)}`)
+    </script>
+</body>
+</html>

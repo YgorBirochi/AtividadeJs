@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let medias = []
+        let medias7 = 0
+        for(i = 0; i < 10; i++){
+            let soma = 0
+            for(p = 0; p < 4; p++){
+                let numero = parseInt(prompt(`Insira a nota ${p+1} do aluno ${i+1}: `))
+                soma += numero 
+            }
+            let media = soma/4 
+            medias.push(media)
+        }
+
+        for(valor of medias){
+            if (valor >= 7){
+                medias7++
+            }
+        }
+        alert(`As medias foram ${medias}\nAs medias maiores de 7 foram ${medias7}`)
+    </script>
+</body>
+</html>

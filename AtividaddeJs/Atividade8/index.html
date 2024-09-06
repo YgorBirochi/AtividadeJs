@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let alturas= []
+        let idades= []
+        for(valorIdades = 0; valorIdades < 5; valorIdades++){
+            let idade = parseInt(prompt(`Insira a idade da pessoa ${valorIdades+1} `))
+            idades.push(idade)
+        }
+        for(valorAlturas = 0; valorAlturas < 5; valorAlturas++){
+            let altura = parseInt(prompt(`Insira a altura da pessoa ${valorAlturas+1} `))
+            alturas.push(altura)
+        }
+        alert(`A lista de idade ficou ${idades}, e ela no reverse ficou ${idades.reverse()}\nA lisa de altura ficou ${alturas}, e ela no reverse ficou ${alturas.reverse()}`)
+</script>
+</body>
+</html>

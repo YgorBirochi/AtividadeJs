@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let alunos = [
+    { "idade": 12, "altura": 1.54 },
+    { "idade": 15, "altura": 1.67 },
+    { "idade": 14, "altura": 1.42 },
+    { "idade": 13, "altura": 1.75 },
+    { "idade": 12, "altura": 1.61 },
+    { "idade": 14, "altura": 1.58 },
+    { "idade": 15, "altura": 1.49 },
+    { "idade": 12, "altura": 1.65 },
+    { "idade": 13, "altura": 1.73 },
+    { "idade": 14, "altura": 1.80 },
+    { "idade": 15, "altura": 1.66 },
+    { "idade": 13, "altura": 1.50 },
+    { "idade": 12, "altura": 1.62 },
+    { "idade": 14, "altura": 1.77 },
+    { "idade": 15, "altura": 1.59 },
+    { "idade": 12, "altura": 1.68 },
+    { "idade": 13, "altura": 1.45 },
+    { "idade": 14, "altura": 1.72 },
+    { "idade": 15, "altura": 1.74 },
+    { "idade": 12, "altura": 1.63 },
+    { "idade": 13, "altura": 1.70 },
+    { "idade": 14, "altura": 1.48 },
+    { "idade": 15, "altura": 1.55 },
+    { "idade": 12, "altura": 1.64 },
+    { "idade": 13, "altura": 1.69 },
+    { "idade": 14, "altura": 1.52 },
+    { "idade": 15, "altura": 1.60 },
+    { "idade": 12, "altura": 1.71 },
+    { "idade": 13, "altura": 1.76 },
+    { "idade": 14, "altura": 1.57 }
+    ]
+        var indicesAlunos = []
+        var contagem = 0
+
+        var alturaTotal = alunos.reduce((a,alunos)=> a + alunos.altura,0)
+        let mediaAltura = alturaTotal / 30
+
+        for(mediaA = 0; mediaA < 30; mediaA++){
+            if(alunos[mediaA].idade >= 13 && alunos[mediaA].altura < mediaAltura){
+                contagem++
+                indicesAlunos.push(mediaA)
+            }
+        }
+        alert(`A quantidade de alunos de 13 anos ou mais com a altura abaixo da media é ${contagem},\nOs valores são.\nMedia${mediaAltura}\nOs valores são ${indicesAlunos}`)
+</script>
+</body>
+</html>
