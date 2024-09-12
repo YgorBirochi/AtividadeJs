@@ -24,16 +24,37 @@
                 salarios.push(salario)
             }
         }
-        
-        for (let contagem in intervalos){
-            for (let salario in salarios) {
-                if (salarios[salario] > intervalos[contagem]-99 && salario <= intervalos[contagem]) {
-                    contagens[contagem] += 1;
+
+        // Verifica em qual intervalo o salário cai e atualiza as contagens
+        for (let salario of salarios) {
+            let encontrouIntervalo = false;
+
+            for (let i = 0; i < intervalos.length; i++) {
+                if (salario <= intervalos[i]) {
+                    contagens[i]++;
+                    encontrouIntervalo = true;
+                    break;
                 }
-            }    
+            }
+
+            // Se o salário for maior que o maior intervalo ($1000 ou mais)
+            if (!encontrouIntervalo) {
+                contagens[contagens.length - 1]++;
+            }
         }
 
-        alert(contagens)
+        // Exibe o resultado final
+        let resultado = `Contagem de vendedores por faixa salarial:\n`;
+
+        for (let i = 0; i < intervalos.length; i++) {
+            let faixaInferior = i === 0 ? 200 : intervalos[i - 1] + 1;
+            let faixaSuperior = intervalos[i];
+            resultado += `$${faixaInferior} - $${faixaSuperior}: ${contagens[i]} vendedor(es)\n`;
+        }
+
+        resultado += `$1000 ou mais: ${contagens[contagens.length - 1]} vendedor(es)`;
+
+        alert(resultado);
         </script>
 </body>
 </html>
