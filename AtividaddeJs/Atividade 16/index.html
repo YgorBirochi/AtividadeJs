@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>            
+        let intervalos = [299, 399, 499, 599, 699, 799, 899, 999]
+        let contagens = [0,0,0,0,0,0,0,0,0]
+        let vendas = [ ]
+        let salarios = [ ]
+
+        while (true) {
+            let venda = parseInt(prompt('Qual o valor de vendas do vendedor(-1 para encerrar)'))
+            if (venda == -1 ){
+                break
+            } else if (isNaN(venda)) {
+                alert('Digite um valor válido');
+            } else {
+                vendas.push(venda)
+                let salario = (200 +(0.09 * venda))
+                salarios.push(salario)
+            }
+        }
+        
+        for (let contagem in intervalos){
+            for (let salario in salarios) {
+                if (salarios[salario] > intervalos[contagem]-99 && salario <= intervalos[contagem]) {
+                    contagens[contagem] += 1;
+                }
+            }    
+        }
+
+        alert(contagens)
+        </script>
+</body>
+</html>
