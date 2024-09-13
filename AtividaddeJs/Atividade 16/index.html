@@ -25,7 +25,6 @@
             }
         }
 
-        // Verifica em qual intervalo o salário cai e atualiza as contagens
         for (let salario of salarios) {
             let encontrouIntervalo = false;
 
@@ -37,13 +36,11 @@
                 }
             }
 
-            // Se o salário for maior que o maior intervalo ($1000 ou mais)
             if (!encontrouIntervalo) {
                 contagens[contagens.length - 1]++;
             }
         }
 
-        // Exibe o resultado final
         let resultado = `Contagem de vendedores por faixa salarial:\n`;
 
         for (let i = 0; i < intervalos.length; i++) {
